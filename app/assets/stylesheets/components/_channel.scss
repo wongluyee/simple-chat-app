@@ -1,0 +1,58 @@
+.main-container {
+  height: 100vh;
+  display: flex;
+}
+
+.middle-bar {
+  color: white;
+  background-color: #4B3A49;
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.channel, .dm {
+  font-size: 16px;
+  color: #a59ca4;
+  margin-bottom: 16px;
+}
+
+.channel-title, .dm-title {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.dot-active {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #1FE5BD;
+  margin-top: 8px;
+  margin-right: 4px;
+}
+
+.dot-inactive {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #a59ca4;
+  margin-top: 8px;
+  margin-right: 4px;
+}
+
+.person {
+  display: flex;
+}
+
+.person > .active {
+  color: white;
+}
+
+.channel > .active {
+  color: white;
+}
+
+.channel > p, .dm > .person > p {
+  margin: 0;
+}
