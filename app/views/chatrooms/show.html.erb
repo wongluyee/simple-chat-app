@@ -7,16 +7,16 @@
     <h2>Le Wagon</h2>
     <div class="person">
       <div class="dot-active"></div>
-      <p>arthur-littm</p>
+      <p><%= current_user.nickname %></p>
     </div>
     <div class="channel">
       <div class="channel-title">
         <h5>Channels</h5>
         <i class="fa-solid fa-plus"></i>
       </div>
-      <p><i class="fa-brands fa-slack"></i> general</p>
+      <p class="active"><i class="fa-brands fa-slack"></i> general</p>
       <p><i class="fa-brands fa-slack"></i> help</p>
-      <p class="active"><i class="fa-brands fa-slack"></i> design</p>
+      <p><i class="fa-brands fa-slack"></i> design</p>
       <p><i class="fa-solid fa-lock"></i> weekend-drinks</p>
       <p><i class="fa-solid fa-lock"></i> gaming</p>
     </div>
@@ -45,7 +45,7 @@
   </div>
   <div class="main-chat">
     <div class="top-title">
-      <h2><i class="fa-brands fa-slack"></i> design</h2>
+      <h2><i class="fa-brands fa-slack"></i> <%= @chatroom.name %></h2>
     </div>
   </div>
 </div>
