@@ -4,7 +4,7 @@
 }
 
 .middle-bar {
-  color: white;
+  color: rgb(216, 216, 216);
   background-color: #4B3A49;
   flex-grow: 1;
   padding: 16px;
@@ -17,7 +17,7 @@
 }
 
 .channel-title, .dm-title {
-  color: white;
+  color: rgb(216, 216, 216);
   display: flex;
   justify-content: space-between;
   font-size: 24px;
@@ -46,13 +46,20 @@
 }
 
 .person > .active {
-  color: white;
+  color: rgb(216, 216, 216);
 }
 
 .channel > .active {
-  color: white;
+  color: rgb(216, 216, 216);
 }
 
 .channel > p, .dm > .person > p {
   margin: 0;
+}
+
+.logout-btn {
+  color: rgb(216, 216, 216);
+  &:hover {
+    color: rgb(118, 118, 118);
+  }
 }

@@ -1,7 +1,12 @@
 <div class="main-container">
-  <div class="side-bar">
-    <a href="#" class="side-bar-btn active">LW</a>
-    <a href="#" class="side-bar-btn">SL</a>
+  <div class="side-bar d-flex flex-column justify-content-between">
+    <div class="d-flex flex-column">
+      <a href="#" class="side-bar-btn active">LW</a>
+      <a href="#" class="side-bar-btn">SL</a>
+    </div>
+    <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
+      <i class="logout-btn fa-solid fa-right-from-bracket"></i>
+    <% end %>
   </div>
   <div class="middle-bar">
     <h2>Le Wagon</h2>
@@ -16,9 +21,7 @@
       </div>
       <p class="active"><i class="fa-brands fa-slack"></i> general</p>
       <p><i class="fa-brands fa-slack"></i> help</p>
-      <p><i class="fa-brands fa-slack"></i> design</p>
-      <p><i class="fa-solid fa-lock"></i> weekend-drinks</p>
-      <p><i class="fa-solid fa-lock"></i> gaming</p>
+      <p><i class="fa-solid fa-lock"></i> design</p>
     </div>
     <div class="dm">
       <div class="dm-title">
