@@ -1,9 +1,32 @@
-.main-chat {
-  background-color: rgb(250, 250, 250);
-  flex-grow: 25;
-  padding: 16px;
-}
+// .top-title {
+//   border-bottom: 1px solid rgb(217, 217, 217);
+// }
 
-.top-title {
-  border-bottom: 1px solid rgb(217, 217, 217);
+.main-chat {
+  flex-grow: 25;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h2 {
+    border-bottom: 1px solid $gray-200;
+    margin-bottom: 0;
+    padding: 1rem;
+  }
+
+  .messages {
+    height: 100%;
+    overflow: scroll;
+    padding: 1rem;
+  }
+
+  #new_message {
+    border-top: 1px solid $gray-200;
+    padding: 1rem;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
 }
