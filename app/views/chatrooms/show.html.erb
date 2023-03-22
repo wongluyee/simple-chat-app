@@ -46,6 +46,17 @@
   <div class="main-chat">
     <div class="top-title">
       <h2><i class="fa-brands fa-slack"></i> <%= @chatroom.name %></h2>
+      <div class="messages">
+        <% @chatroom.messages.each do |message| %>
+          <div id="message-<%= message.id %>">
+            <small>
+              <strong><%= message.user.nickname %></strong>
+              <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+            </small>
+            <p><%= message.content %></p>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
