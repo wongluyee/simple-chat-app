@@ -20,8 +20,8 @@
         <i class="fa-solid fa-plus"></i>
       </div>
       <% @chatrooms.each do |chatroom| %>
-        <%= link_to chatroom_path(chatroom) do  %>
-          <p class="active"><i class="fa-brands fa-slack"></i> <%= chatroom.name %></p>
+        <%= link_to chatroom_path(chatroom), class: "text-decoration-none channel-room" do  %>
+          <p class="mb-0"><i class="fa-brands fa-slack"></i> <%= chatroom.name %></p>
         <% end %>
       <% end %>
     </div>

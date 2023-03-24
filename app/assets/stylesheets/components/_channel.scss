@@ -63,3 +63,14 @@
     color: rgb(118, 118, 118);
   }
 }
+
+.channel-room {
+  color: #a59ca4;
+  &:hover {
+    color: rgb(216, 216, 216);
+  }
+}
+
+.channel-room-active {
+  color: rgb(216, 216, 216);
+}
