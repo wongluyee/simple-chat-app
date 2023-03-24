@@ -19,9 +19,11 @@
         <h5>Channels</h5>
         <i class="fa-solid fa-plus"></i>
       </div>
-      <p class="active"><i class="fa-brands fa-slack"></i> general</p>
-      <p><i class="fa-brands fa-slack"></i> help</p>
-      <p><i class="fa-solid fa-lock"></i> design</p>
+      <% @chatrooms.each do |chatroom| %>
+        <%= link_to chatroom_path(chatroom) do  %>
+          <p class="active"><i class="fa-brands fa-slack"></i> <%= chatroom.name %></p>
+        <% end %>
+      <% end %>
     </div>
     <div class="dm">
       <div class="dm-title">
