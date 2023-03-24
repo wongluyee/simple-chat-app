@@ -37,7 +37,10 @@ alex.photo.attach(io: file, filename: 'alex.png', content_type: 'image/png')
 alex.save
 
 puts 'Creating chatroom...'
-chatroom = Chatroom.new(name: "general")
-chatroom.save
+general = Chatroom.new(name: "general")
+general.save
+
+help = Chatroom.new(name: "help")
+help.save
 
 puts "... created #{User.count} users and #{Chatroom.count} chatroom."
