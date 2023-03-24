@@ -46,15 +46,16 @@
       </div>
     </div>
   </div>
-  <div class="main-chat">
+  <div class="main-chat" data-controller="chatroom-subscription"
+  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
     <h2><i class="fa-brands fa-slack"></i> <%= @chatroom.name %></h2>
-    <div class="messages">
+    <div class="messages" data-chatroom-subscription-target="messages">
       <% @chatroom.messages.each do |message| %>
-        <%= render "chatrooms/messages", message: message %>
+        <%= render "messages/message", message: message %>
       <% end %>
     </div>
     <%= simple_form_for [@chatroom, @message],
-          html: {class: "d-flex"} do |f|
+          html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex"} do |f|
     %>
     <%= f.input :content,
         label: false,
