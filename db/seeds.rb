@@ -8,8 +8,9 @@
 require "open-uri"
 
 puts 'Cleaning the DB...'
-User.destroy_all
+Message.destroy_all
 Chatroom.destroy_all
+User.destroy_all
 
 puts 'Creating users...'
 luyee = User.new(
@@ -33,8 +34,10 @@ src = doc.search('#avatar').first['src']
 photo_url = "https://this-person-does-not-exist.com#{src}"
 file = URI.open(photo_url)
 alex.photo.attach(io: file, filename: 'alex.png', content_type: 'image/png')
+alex.save
 
 puts 'Creating chatroom...'
-Chatroom.new(name: "general")
+chatroom = Chatroom.new(name: "general")
+chatroom.save
 
 puts "... created #{User.count} users and #{Chatroom.count} chatroom."
