@@ -43,4 +43,4 @@ general.save
 help = Chatroom.new(name: "help")
 help.save
 
-puts "... created #{User.count} users and #{Chatroom.count} chatroom."
+puts "... created #{User.count} users and #{Chatroom.count} chatrooms."

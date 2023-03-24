@@ -1,4 +1,5 @@
 class Message < ApplicationRecord
-  belongs_to :chatroom
-  belongs_to :user
+  self.table_name = "sca_messages"
+  belongs_to :chatroom, foreign_key: "sca_chatroom_id"
+  belongs_to :user, foreign_key: "sca_user_id"
 end
