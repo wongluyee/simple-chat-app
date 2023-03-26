@@ -19,7 +19,7 @@ luyee = User.new(
   password: "123123"
 )
 file = URI.open("https://avatars.githubusercontent.com/u/111058709?v=4")
-luyee.photo.attach(io: file, filename: "luyee.jpg", content_type: "image/jpg")
+luyee.photo.attach(io: file, filename: "luyee.png", content_type: "image/png")
 luyee.save
 
 alex = User.new(
